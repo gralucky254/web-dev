@@ -7,24 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb Nairobi</title>
     <link rel="stylesheet" href="airbnb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
     <header><h3>NAIROBI PRESTIGIOUS HOMES</h3>
         <nav>
-        <ul>
-            <li><a href="airbnb.html">HOME</a></li>
-            <li><a href="#">ROOMS</a></li>
-            <li><a href="#">BOOKING</a></li>
-        </ul>
+            <ul>
+                <li><a href="airbnb.html"><i class="fa fa-home"></i>HOME</a></li>
+                <li><a href="#">ROOMS</a></li>
+                <li id="booking"><a href="#">BOOKING</a></li>
+            </ul>
         </nav>
     </header>
-    <div class="search-container">
-        <form action="/search">
-            <label for="search"></label>
-            <input type=" text" id="search" name="q" placeholder="🔍">
-            <button type="submit">search</button>
-        </form>
-    </div>
+    <div class="sub-menu"><i class="fa fa-bars" onclick="toggleMenu()"></i></div>
+            <div class="menu" id="subMenu">
+                <!--<div id="cancel"><i class="fa fa-times"></i></div>-->
+                <ul>
+                    <li class="menu-link"><i class="fa fa-map-marker"></i><a href="map.html">location </a><span>></span></li>
+                    <li class="menu-link"><i class="fa fa-question-circle"></i><a href="#">Help & Support</a><span>></span></li>
+                    <li class="menu-link"><i class="fa fa-mobile"></i><a href="#">Contacts</a><span>></span></li>
+                    <li class="menu-link"><i class="fa fa-sign-in"></i><a href="#">Login</a><span>></span></li>
+                    <li class="menu-link"><i class="fa fa-sign-out"></i><a href="#">Logout</a><span>></span></li>
+                </ul>
+            </div>
+            <div class="search-container">
+                <form action="/search">
+                    <label for="search"></label>
+                    <input type=" text" id="search">
+                    <button type="submit">search</button>
+                </form>
+            </div>
     <div class="description">
         <p>We have 6 tastefully furnished rooms with plenty of natural light, good aesthetics and quality materials to guarantee unrivaled serenity. Our distinct accommodation targets the discerning traveler to Nairobi and its environs with a choice of 3 types of rooms.</p>
     </div>
@@ -51,5 +63,6 @@
         <div class="tell">Tell 📞:0111890346</div>
         <div class="copyright"><p>© 2023-2024</p><p>NAIROBI PRESTIGIOUS HOMES </p></div>
     </footer>
+    <script src="airbnb.js"></script>
 </body>
 </html>

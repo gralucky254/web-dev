@@ -18,11 +18,45 @@ body {
 header {
   background-color: rgba(245, 245, 245, 0.815);
   padding: 0.5rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   box-shadow: 2px;
   top: 0;
-  position: relative;
+  text-align: center;
+}
+header h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+header ul {
+  display: inline-flex;
+  gap: 200px;
+}
+
+header ul li {
+  list-style: none;
+  width: 120px;
+  margin: 5px;
+  padding: 1.5px;
+  gap: 15px;
+}
+header ul .fa {
+  margin-right: 1px;
+}
+header a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+header a:hover,
+header a:focus {
+  transform: scale(1.2);
+  transition: all 3s;
 }
 footer {
   background-color: rgba(245, 245, 245, 0.815);
@@ -56,39 +90,11 @@ a:focus {
 .copyright {
   text-align: center;
 }
-header h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 1rem;
-  padding: 1rem;
-  width: 100%;
-}
-header ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
-}
-
-header li {
-  list-style: none;
-}
-header a {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-header a:hover,
-header a:focus {
-  transform: scale(1.2);
-  transition: all 3s;
-}
-.search-container {
+/*h-container {
   display: flex;
   justify-content: center;
   margin-top: 100px;
-}
+}*/
 form {
   display: flex;
   justify-content: center;
@@ -99,15 +105,104 @@ label {
   font-weight: bold;
   margin-right: 10px;
 }
+.sub-menu {
+  position: fixed;
+  top: 60px;
+  right: 80px;
+}
+.fa-bars {
+  font-size: 1.4rem;
+  border-radius: 4px;
+  background-color: #008cba;
+  box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.4);
+  padding: 0.4rem;
+}
+.menu {
+  display: block;
+  width: 18vw;
+  background-color: rgba(245, 245, 245, 0.774);
+  padding: 10px;
+  border-radius: 20px;
+  position: fixed;
+  top: 13%;
+  right: 75px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.menu.open-menu{
+  max-height: 500px;
+  opacity: 1;
+}
+.menu ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding: 1rem;
+  border-bottom: 0.1rem solid gray;
+}
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(80, 78, 78);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.menu ul li a:hover {
+  font-weight: 700;
+}
+.menu ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.menu-link:hover span{
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+
+.menu .fa {
+  margin-right: 1rem;
+}
+/*#cancel .fa {
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.459);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+}*/
 #search {
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
   width: 300px;
   margin-right: 10px;
-  background-color: transparent;
+  background-color: rgba(245, 245, 245, 0.733);
   color: black;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 button[type="submit"] {
   background-color: #008cba;
@@ -119,7 +214,7 @@ button[type="submit"] {
   padding: 10px;
   cursor: pointer;
   transition: all 0.2s;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 button[type="submit"]:hover {
   background-color: #005f6b;
