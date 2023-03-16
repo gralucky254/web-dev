@@ -275,3 +275,36 @@ h4 {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   place-items: center;
 }
+@media only screen and (max-width: 600px) {
+
+  /* Update header styles */
+  header ul {
+    display: block;
+    text-align: center;
+    gap: 0;
+  }
+  header ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 1.5px;
+    width: auto;
+  }
+  header ul .fa {
+    margin-right: 0;
+  }
+
+  /* Update menu styles */
+  .sub-menu {
+    display: block;
+  }
+  .menu {
+    width: 80vw;
+    top: 15%;
+    right: 10px;
+  }
+  .menu ul li {
+    margin-right: 0;
+    border-bottom: none;
+  }
+
+}
