@@ -275,36 +275,38 @@ h4 {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   place-items: center;
 }
-@media only screen and (max-width: 600px) {
-
-  /* Update header styles */
-  header ul {
+@media screen and (max-width: 481px){
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .menu{
+    display: none;
+  }
+  body {
+    background-image: url(bed.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  header h3 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  header .phone {
+    background-color: whitesmoke;
+    top: 0;
+    width: 100vw;
+  }
+  header .phone ul {
+    position: absolute;
     display: block;
-    text-align: center;
-    gap: 0;
+    margin-top: 150px;
+    background-color: whitesmoke;
   }
-  header ul li {
-    display: inline-block;
-    margin: 5px;
-    padding: 1.5px;
-    width: auto;
+  footer {
+   bottom: 0;
+   position: fixed;
   }
-  header ul .fa {
-    margin-right: 0;
-  }
-
-  /* Update menu styles */
-  .sub-menu {
-    display: block;
-  }
-  .menu {
-    width: 80vw;
-    top: 15%;
-    right: 10px;
-  }
-  .menu ul li {
-    margin-right: 0;
-    border-bottom: none;
-  }
-
-}
