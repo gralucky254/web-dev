@@ -17,7 +17,7 @@ body {
 }
 header {
   background-color: rgba(245, 245, 245, 0.815);
-  padding: 0.5rem;
+  padding: 0.05rem;
   width: 100vw;
   position: fixed;
   box-shadow: 2px;
@@ -28,35 +28,41 @@ header h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   width: 100%;
 }
-header ul {
-  display: inline-flex;
-  gap: 200px;
+.navbar{
+  background-color: rgba(245, 245, 245, 0.815);
+  width: 100%;
+  position: fixed;
+  top: 56px; 
 }
-
-header ul li {
+.navbar ul{
+  display: flex;
+  align-items: center;
+ justify-content: center;
+ gap: 300px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.navbar ul li {
   list-style: none;
-  width: 120px;
-  margin: 5px;
-  padding: 1.5px;
-  gap: 15px;
 }
-header ul .fa {
-  margin-right: 1px;
-}
-header a {
-  display: block;
-  text-decoration: none;
+.navbar ul a {
   color: black;
   font-weight: bold;
+  text-decoration: none;
 }
-header a:hover,
-header a:focus {
+
+.navbar ul a:hover,
+.navbar ul a:focus {
   transform: scale(1.2);
   transition: all 3s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 footer {
   background-color: rgba(245, 245, 245, 0.815);
@@ -111,11 +117,12 @@ label {
   right: 80px;
 }
 .fa-bars {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   border-radius: 4px;
-  background-color: #008cba;
-  box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: rgba(199, 178, 178, 0);
+  box-shadow:  1px 1px 3px rgb(0, 0, 0);
   padding: 0.4rem;
+  border: none;
 }
 .menu {
   display: block;
@@ -124,7 +131,7 @@ label {
   padding: 10px;
   border-radius: 20px;
   position: fixed;
-  top: 13%;
+  top: 14%;
   right: 75px;
   overflow: hidden;
   max-height: 0;
@@ -281,32 +288,155 @@ h4 {
     margin: 0;
     box-sizing: border-box;
   }
-  .menu{
-    display: none;
-  }
   body {
     background-image: url(bed.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
-  header h3 {
+  .sub-menu {
+    display: inline-block;
     position: fixed;
-    top: 0;
+    top: 60px;
+    left: 10px;
+  }
+
+  header {
+    background-color: white;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  header h3 {
+    font-size: 1.5rem;
+  }
+  .menu {
+    display: block;
+    width: 80vw;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    position: fixed;
+    top: 310px;
+    left: 15px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .navbar{
+    margin-top: 70px;
+    width: 80vw;
+    position: fixed;
+    left: 15px;
+    padding: 2rem;
+    height: 30vh;
+    background-color: black;
+    border-radius: 20px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+} .menu.open-menu{
+  max-height: 500px;
+  opacity: 1;
+}
+  .navbar ul {
+    display: block;
+  }
+  .navbar ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 1rem;
+    border-bottom: 0.1rem solid gray;
+  }
+  .navbar ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(80, 78, 78);
+    transition: 0.5s;
+  }
+  .navbar.open-menu {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .menu ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 1rem;
+    border-bottom: 0.1rem solid gray;
+  }
+  .menu ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(80, 78, 78);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .menu ul li a:hover {
+    font-weight: 700;
+  }
+  .menu ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .menu-link:hover span{
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+  }
+  .menu .fa {
+    margin-right: 1rem;
+  }
+  .navbar  li {
+    padding: 10px;
+  }
+  .navbar ul a {
+    color: white;
+  }
+  #search {
+    display: none;
+  }
+  button[type="submit"] {
+    display: none;
+  }
+  h4 {
+    display: none;
+  }
+  .square {
+    display: none;
+  }
+  .description {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
-  header .phone {
-    background-color: whitesmoke;
-    top: 0;
-    width: 100vw;
-  }
-  header .phone ul {
-    position: absolute;
-    display: block;
-    margin-top: 150px;
-    background-color: whitesmoke;
-  }
   footer {
+    display: none;
    bottom: 0;
    position: fixed;
   }
+
+}
